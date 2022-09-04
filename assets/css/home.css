@@ -1,0 +1,127 @@
+body {
+  margin: 0px;
+  color: rgb(87, 83, 83);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 50;
+}
+
+#main-container {
+  width: 60%;
+  margin: auto;
+  background-color: #c4f8ff;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+h1 {
+  color: #464d66;
+  text-align: center;
+  font-size: 36px;
+  margin: 0;
+}
+
+
+input,select{
+  padding: 2px;
+}
+
+.input-desc{
+  margin: 0.5rem 2rem;
+}
+
+.input-desc p{
+  margin: 0.5rem 0;
+}
+
+.form-button{
+  display: flex;
+  align-content: space-between;
+}
+
+button{
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button:nth-child(1){
+  width: fit-content;
+  margin-left: 8rem;
+}
+
+button:nth-child(2){
+  width: fit-content;
+  margin-left: 1rem;
+}
+
+.inline {
+  display: flex;
+}
+
+.inline-items {
+  text-align: center;
+  width: 49%;
+  padding: 10px;
+  margin: auto;
+  align-self:center;
+}
+
+.inline-items:hover{
+  background-color: chartreuse;
+  border-radius: 2rem;
+}
+
+.inline-items p{
+  text-align: center;
+  margin: 0;
+  margin: 0.5rem 0;
+}
+
+ul {
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.task-list-item {
+  list-style: none;
+  /* border: 1px solid gray; */
+  border-radius: 2rem;
+  margin: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.task-list-item:hover {
+  background-color: #efedcc;
+}
+
+
+.task-description {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding-left: 1rem;
+  width: 85%;
+}
+
+.task-description span{
+  margin: 0.5rem 0;
+  padding: 4px;
+  /* background-color: aqua; */
+  font-size: 1.5rem;
+  /* border: 1px solid black; */
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.task-description p{
+  margin: 0.5rem 0;
+}
+
+.task-type{
+  margin: 0;
+  align-self: center;
+  padding: 4px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <section id="main-container">
+        <h1>ToDo App</h1>
+    <form method="post">
+        <div class="input-desc">
+            <p>Description</p>
+            <input type="textarea" name="description" id="description">
+        </div>
+        <div class="inline">
+            <div class="inline-items">
+                <p>Category</p>
+                <select name="category" id="category">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="inline-items">
+                <p>Due Date</p>
+                <input type="date" name="dueDate">
+            </div>
+        </div>
+        <br>
+        <div class="form-button">
+            <button type="submit" formaction="/add-task" id="add">ADD TASK</button>
+            <button type="submit" id="delete" formaction="/delete-tasks">DELETE TASKS</button>
+        </div>
+        
+        <ul>
+            <% for(let i=0; i<tasks_list.length; i++) {%>
+                <li class="task-list-item">
+                    <div class="inline">
+                        <input type="checkbox" name="id" value="<%= tasks_list[i]._id %>">
+                        <div class="task-description">
+                            <span><%= tasks_list[i].description %></span>
+                            <p>
+                                <%= months[tasks_list[i].dueDate.getMonth()] %> <%= tasks_list[i].dueDate.getDate() %>, <%= tasks_list[i].dueDate.getFullYear() %>
+                            </p>
+                        </div>
+                        <div class="task-type">
+                            <%= tasks_list[i].category %>
+                        </div>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    
+    </form>
+    </section>
+</body>
+
+</html>
